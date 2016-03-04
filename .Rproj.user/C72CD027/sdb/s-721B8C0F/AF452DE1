@@ -1,0 +1,17 @@
+{
+    "contents" : "## INSTALL THESE DEPENDENCIES\n\n# install packages for text mining\nif(!\"tm\" %in% rownames(installed.packages())){\n  install.packages(\"tm\", dependencies = TRUE)\n}\nif(!\"Rcampdf\" %in% rownames(installed.packages())){\n  install.packages(\"Rcampdf\", repos = \"http://datacube.wu.ac.at/\", type = \"source\")\n}\n# install package to product plots\nif(!\"ggplot2\" %in% rownames(installed.packages())){\n  install.packages(\"ggplot2\", dependencies = TRUE)\n}\nif(!\"devtools\" %in% rownames(installed.packages())){\n  install.packages(\"devtools\", dependencies = TRUE)\n}\n# install package to do arithmetic with dates\nif(!\"lubridate\" %in% rownames(installed.packages())){\n  install.packages(\"lubridate\", dependencies = TRUE)\n}\n# install package to easily wrangle data\nif(!\"data.table\" %in% rownames(installed.packages())){\n  install.packages(\"data.table\", dependencies = TRUE)\n}\n# install utils to pull last x requests\nif(!\"utils\" %in% rownames(installed.packages())){\n  install.packages(\"utils\", dependencies = TRUE)\n}\n# install package for quantitative string comparison\nif(!\"qlcMatrix\" %in% rownames(installed.packages())){\n  install.packages(\"qlcMatrix\", dependencies = TRUE)\n}\n# install package for quantitative string comparison\nif(!\"RSocrata\" %in% rownames(installed.packages())){\n  install.packages(\"RSocrata\", dependencies = TRUE)\n}\n# install package for interactive application\nif(!\"shiny\" %in% rownames(installed.packages())){\n  install.packages(\"shiny\", dependencies = TRUE)\n}\n# install package for utilities\nif(!\"geneorama\" %in% rownames(installed.packages())){\n  install.packages(devtools::install_github('geneorama/geneorama'))\n}\n\n",
+    "created" : 1452881480773.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2527892953",
+    "id" : "AF452DE1",
+    "lastKnownWriteTime" : 1452892763,
+    "path" : "~/Desktop/foia-miner/FOIA-Dashboard/startup.R",
+    "project_path" : "startup.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

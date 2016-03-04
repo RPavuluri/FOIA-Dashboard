@@ -1,0 +1,9 @@
+{
+    "path" : "~/Desktop/foia-miner/FOIA-Dashboard",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

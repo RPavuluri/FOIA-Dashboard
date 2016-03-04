@@ -1,0 +1,17 @@
+{
+    "contents" : "# FOIA MINER\n# ui.R\n# Chicago Department of Innovation and Technology\n#\n# Dashboard to track 1) most popular words in FOIA requests\n# from selected time period, 2) how the most popular words change\n# each month, 3) the volume of FOIA requests by month, and 4) words that\n# demonstrate a statistially significant rise in volume when compared to\n# their average frequency in previous six months.\n# Dashboard built for several City of Chicago Departments.\n\n################################################################################\n\nshinyUI(fluidPage(\n  h1(\"City of Chicago FOIA Miner\", align = \"center\"),\n  h3(\"Department of Innovation and Technology\", align = \"center\"),\n  br(),\n\n  #sidebar and sidepanel for dep't options and download buttons\n  sidebarLayout(\n    sidebarPanel(helpText(\"Use these options to find trends in\n                          Freedom of Information Act requests.\"),\n      selectInput(\"department\",\n          label = \"Select Department\",\n          choices = list(\"Innovation and Technology\", \"License Appeal Commission\",\n                        \"Family & Support Services\", \"Finance\", \"Fleet & Facility Management\",\n                        \"Planning & Development\", \"Water Management\", \"Buildings\",\n                        \"Streets & Sanitation\", \"Transportation\", \"Mayor's Office\",\n                        \"Animal Care & Control\")),\n    dateRangeInput(\"date\", label = \"Select Date Range\", start = Sys.Date() - 365, end = Sys.Date(), max = Sys.Date()),\n    br(),\n    br(),\n    br(),\n    br(),\n    br(),\n    downloadButton('overall_data', 'Download Top 20 Words Overall'),\n    br(),\n    br(),\n    downloadButton('month_data', 'Download Top 5 Words by Month'),\n    br(),\n    br(),\n    downloadButton('volume_data', 'Download Requests by Month'),\n    br(),\n    br(),\n    downloadButton('rising_data', 'Download Rising Words by Month')\n    ),\n\n    #main panel to display plots and tables\n    mainPanel(\n      tabsetPanel(\n        tabPanel(\"Top Words Overall\", plotOutput(\"overall_plot\")),\n        tabPanel(\"Top Words By Month\", plotOutput(\"month_plot\")),\n        tabPanel(\"Request Volume\", br(), textOutput(\"rec_req\"), textOutput(\"volume_text\"), plotOutput(\"volume_plot\", click = \"plot_click\")),\n        tabPanel(\"Rising Words\", br(), textOutput(\"rising_explanation\"), plotOutput(\"rising_plot\"), tableOutput(\"rising_table\"))\n      )\n    )\n  )\n))",
+    "created" : 1452564180007.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4256652219",
+    "id" : "69EEB31B",
+    "lastKnownWriteTime" : 1452876415,
+    "path" : "~/Desktop/foia-miner/FOIA-Dashboard/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
